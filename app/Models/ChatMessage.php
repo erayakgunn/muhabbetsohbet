@@ -14,4 +14,12 @@ class ChatMessage extends Model
     public function user(){
         return $this->hasOne('App\Models\User','id','user_id');
     }
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s',
+    ];
 }
