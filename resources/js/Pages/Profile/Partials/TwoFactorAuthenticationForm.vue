@@ -1,25 +1,25 @@
 <template>
     <jet-action-section>
         <template #title>
-            Two Factor Authentication
+            İki Faktörlü Kimlik Doğrulama
         </template>
 
         <template #description>
-            Add additional security to your account using two factor authentication.
+            İki faktörlü kimlik doğrulamayı kullanarak hesabınıza ek güvenlik sağlayın.
         </template>
 
         <template #content>
             <h3 class="text-lg font-medium text-gray-900" v-if="twoFactorEnabled">
-                You have enabled two factor authentication.
+                İki faktörlü kimlik doğrulamayı etkinleştirdiniz.
             </h3>
 
             <h3 class="text-lg font-medium text-gray-900" v-else>
-                You have not enabled two factor authentication.
+                İki faktörlü kimlik doğrulamayı etkinleştirmediniz.
             </h3>
 
             <div class="mt-3 max-w-xl text-sm text-gray-600">
                 <p>
-                    When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.
+                    İki faktörlü kimlik doğrulama etkinleştirildiğinde, kimlik doğrulama sırasında güvenli, rastgele bir token istenir. Bu <tokeni></tokeni> telefonunuzun Google Authenticator uygulamasından alabilirsiniz.
                 </p>
             </div>
 
@@ -54,7 +54,7 @@
                 <div v-if="! twoFactorEnabled">
                     <jet-confirms-password @confirmed="enableTwoFactorAuthentication">
                         <jet-button type="button" :class="{ 'opacity-25': enabling }" :disabled="enabling">
-                            Enable
+                            Etkinleştir
                         </jet-button>
                     </jet-confirms-password>
                 </div>

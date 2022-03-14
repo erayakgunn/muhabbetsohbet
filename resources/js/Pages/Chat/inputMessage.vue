@@ -1,14 +1,14 @@
 <template>
 	<div class="relative h-10 m-1">
-		<div class="grid grid-cols-6"
+		<div class="grid grid-cols-9"
 			style="border-top: 1px solid #e6e6e6;">
 			<input type="text"
 				v-model="message"
 				@keyup.enter="sendMessage()"
 				placeholder="Yeni mesaj"
-				class="col-span-5 outline-none p-1" />
+				class="col-span-8 outline-none p-1 rounded" />
 			<button @click="sendMessage()"
-				class="place-self-end bg-gray-500 hover:bg-blue-700 p-1 mt-1 rounded text-white">
+				class="col-span-1 bg-gray-500 hover:bg-blue-700 p-2 rounded text-white">
 				Yolla
 			</button>
 		</div>
